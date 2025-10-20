@@ -1,0 +1,71 @@
+{
+  "id": "V003",
+  "type": "vendeur",
+  "profil": {
+    "nom": "DIABATE",
+    "prenom": "Ismael",
+    "email": "Diabateismael@gmail.com",
+    "telephone": "+225 07 88 77 66 55",
+    "dateInscription": "2024-10-20",
+    "verification": {
+      "statut": "en_attente",
+      "dateVerification": null,
+      "documentsVerifies": []
+    }
+  },
+  "exploitation": {
+    "nom": "Élevage Diabaté Avicole",
+    "adresse": {
+      "ville": "Daloa",
+      "commune": "Daloa",
+      "quartier": "Maroc",
+      "pays": "Côte d'Ivoire"
+    },
+    "typeElevage": ["Poulet", "Dinde"],
+    "nombreAnimaux": 500,
+    "superficie": "2 hectares",
+    "certifications": ["Agriculture biologique (en cours)"]
+  },
+  "produits": [
+    {
+      "id": "P004",
+      "nom": "Poulet de chair",
+      "categorie": "Volailles",
+      "prixUnitaireMoyen": 3500,
+      "stockDisponible": 150
+    }
+  ],
+  "statistiques": {
+    "ventesTotales": 0,
+    "chiffreAffaires": 0,
+    "noteMoyenne": 0,
+    "nombreAvis": 0,
+    "tauxReponse": 0,
+    "delaiReponse": "0"
+  },
+  "ventes": [],
+  "paiement": {
+    "methodePrincipale": "Orange Money",
+    "numeroCompte": "+225 07 88 77 66 55",
+    "methodesSecondaires": [],
+    "soldeDisponible": 0,
+    "enAttente": 0
+  },
+  "notifications": [],
+  "parametres": {
+    "notifications": {
+      "email": true,
+      "sms": true,
+      "push": true
+    },
+    "confidentialite": {
+      "afficherTelephone": true,
+      "afficherAdresse": false
+    },
+    "livraison": {
+      "proposeLivraison": true,
+      "zoneLivraison": ["Daloa", "Yamoussoukro"],
+      "fraisLivraison": 1000
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "A012",
+  "type": "acheteur",
+  "profil": {
+    "nom": "Meité",
+    "prenom": "Hamed",
+    "email":"MeitéHamed20@gmail.com",
+    "telephone": "+225 05 98 76 54 32",
+    "typeClient": "particulier"
+  },
+  "adresse": {
+    "principale": {
+      "ville": "Abidjan",
+      "commune": "Cocody",
+      "quartier": "Riviera 3",
+      "rue": "Boulevard Latrille",
+      "pays": "Côte d'Ivoire"
+    },
+    "livraison": {
+      "ville": "Abidjan",
+      "commune": "Cocody",
+      "quartier": "Riviera 3",
+      "complementAdresse": "Face à la pharmacie du coin",
+      "telephone": "+225 05 98 76 54 32"
+    }
+  },
+  "commandes": [
+    {
+      "id": "CMD001",
+      "vendeur": {
+        "id": "V001",
+        "nom": "Ferme Kouassi & Fils"
+      },
+      "produits": [
+        {
+          "id": "P002",
+          "nom": "Lot de 15 poulets de chair",
+          "quantite": 1,
+          "prixUnitaire": 45000,
+          "total": 45000
+        }
+      ],
+      "montantTotal": 45000,
+      "fraisLivraison": 5000,
+      "montantFinal": 50000,
+      "statut": "en_cours",
+      "dateCommande": "2024-10-18",
+      "dateLivraisonPrevue": "2024-10-20",
+      "methodePaiement": "Orange Money",
+      "adresseLivraison": "Riviera 3, Face à la pharmacie",
+      "tracking": {
+        "etapes": [
+          {
+            "statut": "commande_validee",
+            "date": "2024-10-18 10:30",
+            "description": "Commande confirmée par le vendeur"
+          },
+          {
+            "statut": "preparation",
+            "date": "2024-10-18 14:00",
+            "description": "Préparation de votre commande"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CMD002",
+      "vendeur": {
+        "id": "V015",
+        "nom": "Élevage Bio Savane"
+      },
+      "produits": [
+        {
+          "id": "P125",
+          "nom": "Cartons d'œufs frais",
+          "quantite": 2,
+          "prixUnitaire": 30000,
+          "total": 60000
+        }
+      ],
+      "montantTotal": 60000,
+      "fraisLivraison": 3000,
+      "montantFinal": 63000,
+      "statut": "livré",
+      "dateCommande": "2024-10-10",
+      "dateLivraison": "2024-10-12",
+      "methodePaiement": "MTN Money",
+      "adresseLivraison": "Riviera 3, Face à la pharmacie",
+      "avis": {
+        "note": 5,
+        "commentaire": "Excellent service, œufs très frais !",
+        "date": "2024-10-13"
+      }
+    }
+  ],
+  "favoris": [
+    {
+      "id": "P001",
+      "nom": "Bélier reproducteur",
+      "vendeur": "V001",
+      "prix": 120000,
+      "image": "/images/belier1.jpg",
+      "dateAjout": "2024-10-15"
+    },
+    {
+      "id": "P045",
+      "nom": "Chèvre alpine",
+      "vendeur": "V008",
+      "prix": 75000,
+      "image": "/images/chevre-alpine.jpg",
+      "dateAjout": "2024-10-12"
+    }
+  ],
+  "panier": [
+    {
+      "id": "P078",
+      "nom": "Poulet fermier",
+      "vendeur": "V022",
+      "quantite": 3,
+      "prixUnitaire": 3500,
+      "total": 10500,
+      "image": "/images/poulet-fermier.jpg"
+    }
+  ],
+  "paiement": {
+    "methodePrincipale": "Orange Money",
+    "numeroCompte": "+225 05 98 76 54 32",
+    "methodesEnregistrees": [
+      {
+        "type": "Orange Money",
+        "numero": "+225 05 98 76 54 32",
+        "defaut": true
+      },
+      {
+        "type": "MTN Money",
+        "numero": "+225 05 11 22 33 44",
+        "defaut": false
+      }
+    ]
+  },
+  "historiquePaiements": [
+    {
+      "id": "PAY001",
+      "commande": "CMD002",
+      "montant": 63000,
+      "methode": "MTN Money",
+      "date": "2024-10-10",
+      "statut": "reussi"
+    },
+    {
+      "id": "PAY002",
+      "commande": "CMD001",
+      "montant": 50000,
+      "methode": "Orange Money",
+      "date": "2024-10-18",
+      "statut": "en_attente"
+    }
+  ],
+  "statistiques": {
+    "nombreCommandes": 12,
+    "montantTotalDepense": 485000,
+    "commandesMoyenneParMois": 4,
+    "vendeursFavoris": 3,
+    "categoriesPreferes": ["Volailles", "Caprins", "Produits laitiers"]
+  },
+  "avisLaisses": [
+    {
+      "commande": "CMD002",
+      "vendeur": "V015",
+      "produit": "Cartons d'œufs frais",
+      "note": 5,
+      "commentaire": "Excellent service, œufs très frais !",
+      "date": "2024-10-13"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "N101",
+      "type": "commande_en_preparation",
+      "message": "Votre commande CMD001 est en préparation",
+      "date": "2024-10-18",
+      "lu": false
+    },
+    {
+      "id": "N102",
+      "type": "promotion",
+      "message": "Promotion sur les poulets fermiers : -20%",
+      "date": "2024-10-17",
+      "lu": true
+    },
+    {
+      "id": "N103",
+      "type": "livraison",
+      "message": "Votre commande CMD002 a été livrée",
+      "date": "2024-10-12",
+      "lu": true
+    }
+  ],
+  "parametres": {
+    "notifications": {
+      "email": true,
+      "sms": false,
+      "push": true,
+      "promotions": true,
+      "nouveautes": true
+    },
+    "confidentialite": {
+      "afficherProfil": false,
+      "partagerHistorique": false
+    },
+    "preferences": {
+      "langue": "fr",
+      "devise": "FCFA",
+      "categoriesFavorites": ["Volailles", "Caprins"]
+    }
+  }
+}
