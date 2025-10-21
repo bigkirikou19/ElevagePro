@@ -95,7 +95,7 @@ function Register2() {
         // REDIRECTION VERS LA PAGE DE CONNEXION après 1.5 seconde
         setTimeout(() => {
           // Utilise window.location.href pour simuler la navigation
-          window.location.href = LOGIN_PAGE_PATH; 
+          window.location.href = '/Home';
         }, 1500); 
       }, 1000);
     }
