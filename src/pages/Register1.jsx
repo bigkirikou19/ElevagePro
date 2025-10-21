@@ -209,7 +209,7 @@ function Register1() {
         setShowSuccess(true);
         // Redirection SIMULÉE vers la page d'accueil (/) après 2 secondes
         setTimeout(() => {
-           window.location.href = '/Home'; 
+           window.location.href = '/Login'; 
         }, 2000);
       }, 1000);
     }
