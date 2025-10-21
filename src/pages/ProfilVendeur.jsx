@@ -103,7 +103,6 @@ const vendeur = {
 // ----------------------------------------------------------------------
 export default function ProfilVendeur() {
   const [activeTab, setActiveTab] = useState('profil');
-  const [isLoggedOut, setIsLoggedOut] = useState(false);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -121,30 +120,13 @@ export default function ProfilVendeur() {
   };
 
   const handleLogout = () => {
-    console.log("Déconnexion du vendeur...");
-    setIsLoggedOut(true);
+    console.log("Déconnexion en cours...");
+    // Supprimer les données de session
+    sessionStorage.removeItem('user');
+    sessionStorage.removeItem('isAuthenticated');
+    // Rediriger vers la page d'accueil
+    window.location.href = '/Home';
   };
-  
-  if (isLoggedOut) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 max-w-md w-full text-center transform scale-100 animate-fadeIn">
-          <LogOut className="w-16 h-16 sm:w-20 sm:h-20 text-red-500 mx-auto mb-6" />
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Déconnexion du Vendeur</h1>
-          <p className="text-gray-600 mb-8 text-sm sm:text-base">
-            Votre session Vendeur a été terminée avec succès.
-          </p>
-          <a
-            href="/"
-            className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg flex items-center justify-center gap-2"
-          >
-            <Home className="w-5 h-5 sm:w-6 sm:h-6" />
-            Retourner à l'accueil
-          </a>
-        </div>
-      </div>
-    );
-  }
 
   const verificationStatut = vendeur.profil.verification.statut;
 
